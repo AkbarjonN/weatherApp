@@ -17,10 +17,9 @@ import { resolvers } from "./schema/resolvers.js";
 
 dotenv.config();
 
-
-const PORT = process.env.PORT || 4000;
-const FRONTEND_URL = process.env.FRONTEND_URL || "https://weather-app-murex-tau-18.vercel.app"; 
-
+const PORT = process.env.PORT || 4000; // <- render env PORT ishlatiladi
+const FRONTEND_URL =
+  process.env.FRONTEND_URL || "https://weather-app-murex-tau-18.vercel.app";
 
 const server = new ApolloServer({
   typeDefs,
@@ -29,8 +28,10 @@ const server = new ApolloServer({
     origin: FRONTEND_URL,
     credentials: true,
   },
+  persistedQueries: false, // optional: DoS xatolarini oldini olish uchun
 });
 
 server.listen({ port: PORT }).then(({ url }) => {
   console.log(`🚀 GraphQL Server running at ${url}`);
 });
+
