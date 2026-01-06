@@ -17,11 +17,11 @@ import { resolvers } from "./schema/resolvers.js";
 
 dotenv.config();
 
-// Backend port va frontend URLni .env orqali olamiz
-const PORT = process.env.PORT || 4000;
-const FRONTEND_URL = process.env.FRONTEND_URL || "*"; // * test uchun, lekin deployda frontend URL yozing
 
-// Apollo server
+const PORT = process.env.PORT || 4000;
+const FRONTEND_URL = process.env.FRONTEND_URL || "https://weather-app-murex-tau-18.vercel.app"; 
+
+
 const server = new ApolloServer({
   typeDefs,
   resolvers,
