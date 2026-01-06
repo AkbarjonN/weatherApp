@@ -1,0 +1,10 @@
+# Secret files
+.env
+backend/.env
+
+# Dependencies
+node_modules
+
+# Build outputs
+dist
+build
