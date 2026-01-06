@@ -20,7 +20,8 @@ export function getWeatherBackground(iconCode: string): string {
     return rain;
   if (iconCode.includes("11")) return storm;
   if (iconCode.includes("13")) return snow;
-  if (iconCode.includes("50n") || iconCode.includes("50d")) return fog;
+  if ( iconCode.includes("50d")) return fog;
+  if (iconCode === "50n") return night;
 
   return clear;
 }
