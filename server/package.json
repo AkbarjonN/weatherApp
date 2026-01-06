@@ -9,6 +9,7 @@
     },
     "dependencies": {
         "apollo-server": "^3.13.0",
+        "cors": "^2.8.5",
         "dotenv": "^16.6.1",
         "node-fetch": "^3.3.2"
     },
